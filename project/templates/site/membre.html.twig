@@ -1,0 +1,52 @@
+{% extends 'base.html.twig' %}
+{% block body %}
+
+<center><h1>page admin</h1></center>
+<p>Liste des utilisateurs avec leurs informations.</p>
+    {% for utilisateurs in utilisateurs %}
+        <p>Prénom :{{ utilisateurs.prenom }}</p>
+        <p>Nom :{{ utilisateurs.nom }}</p>
+        <p>Sexe :{{ utilisateurs.mail }}</p>
+        <p>Mail :{{ utilisateurs.sexe }}</p>
+        <p>Code postal :{{ utilisateurs.codepostal }}</p>
+        <p>Mot de passe :{{ utilisateurs.password }}</p>
+    {% endfor %}
+
+<p>Recette engendré en fonction du temps.</p>
+    
+        <p>Sur 1 semaine :{{ recettes.unesemaine }}</p>
+        <p>Sur 1 mois :{{ recettes.unmois }}</p>
+        <p>Sur 6 mois :{{ recettes.sixmois }}</p>
+        <p>Sur 1 ans :{{ recettes.unans }}</p>
+    
+
+<p>Nombre d'utilisateur en fonction des paliers.</p>
+    
+        <p> {{ palier.rookie }} ayant atteint le palier Rookie.</p>
+        <p> {{ palier.fan }} ayant atteint le palier Fan.</p>
+        <p> {{ palier.cinephile }} ayant atteint le palier Cinéphile.</p>
+        <p> {{ palier.vip }} ayant atteint le palier Vip.</p>
+        <p> {{ palier.admin }} ayant atteint le palier Admin.</p>
+    
+
+<p>Compteurs permettant de représenter en nombre l'activité du site.</p>
+    
+        <p> Le nombre totale de connexion :{{ compteur.connexion }} </p>
+        <p> Le nombre totale d'inscription :{{ compteur.inscription }} </p>
+        <p> Le nombre totale de films vendus :{{ compteur.film }} </p>
+        <p> Le nombre totale  d'admin  :{{ compteur.admin }} </p>
+        <p> Le nombre totale de membre :{{ compteur.membre }} </p>
+       
+    
+<p>Les cartes bancaires des utilisateurs.</p>
+    {% for cartebancaires in cartebancaires %}
+        <p> Prénom : {{ cartebancaires.prenom }}   Nom : {{ cartebancaires.nom }} </p>
+        <p>Date d'expiration : {{ cartebancaires.date | date ('d/m/Y') }}</p>
+        <p> Numero de carte :{{ cartebancaires.numero}} </p>
+        <p> Code de sécurité :{{ cartebancaires.code }} </p>
+       
+    {% endfor %}
+
+
+
+{% endblock %}

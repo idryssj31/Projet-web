@@ -1,0 +1,173 @@
+body {
+    background-color: antiquewhite;
+}
+
+.logo {
+    width: 7%;
+    
+}
+
+.popcorn {
+    width: 8%;
+    
+}
+
+.home {
+    margin-right: 30px;
+    
+}      
+
+.message {
+    margin-right: 30px;
+    
+}
+
+.parametre {
+    margin-right: 30px;
+   
+}
+
+.panier {
+    margin-right: 30px;
+    
+}
+
+.filtre {
+    margin-right: 30px;
+   
+}
+
+.question {
+    margin-right: 30px;
+   
+}
+
+
+
+.fond {
+    background-color: #A1ABC3;
+}
+
+.slide0 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.slide0:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.slide0 {
+    float: left;
+    margin-left: 60px;
+}
+
+.slide1 {
+    float: left;
+    margin-left: 40px;
+}
+
+.slide1 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.slide1:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.slide2 {
+    float: left;
+    margin-left: 110px;
+}
+
+.slide2 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+
+.slide2:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+.slide3 {
+    float: left;
+    margin-left: 240px;
+}
+
+.slide3 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.slide3:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.slide4 {
+    float: left;
+    margin-left: 50px;
+}
+
+.slide4 {
+	-webkit-transform: scale(1);
+	transform: scale(1);
+	-webkit-transition: .3s ease-in-out;
+	transition: .3s ease-in-out;
+}
+.slide4:hover img {
+	-webkit-transform: scale(1.3);
+	transform: scale(1.3);
+}
+
+.slides0 {
+    width: calc(300px * 6);
+    animation: glisse 10s infinite;
+}
+
+.slider0 {
+    width: 300px;
+    overflow: hidden;
+}
+
+@keyframes glisse {
+    0% {
+        transform: translateX(0);
+    }
+    20% {
+        transform: translateX(-300px);
+    }
+    40% {
+        transform: translateX(-600px);
+    }
+    60% {
+        transform: translateX(-900px);
+    }
+    80% {
+        transform: translateX(-1200px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+
+.france {
+    display: inline;
+}
+
+.manquer {
+    display: inline;
+}
+    
+.titre {
+    font-size: 37px;
+}

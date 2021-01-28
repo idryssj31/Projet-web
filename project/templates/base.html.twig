@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>{% block title %}Welcome!{% endblock %}</title>
+        <link  rel="stylesheet" href="{{ ('http://127.0.0.1:5500/templates/site/nav.css') }}"> 
+        {% block stylesheets %}{% endblock %}
+
+        {% block javascripts %}{% endblock %}
+    </head>
+    <body>
+        <div class="fond">
+
+            <div class="nav">
+                <center>
+                    <img src="{{('http://127.0.0.1:5500/templates/image/logo.png') }}" alt="logo" class="logo">
+                    <img src="{{('http://127.0.0.1:5500/templates/image/corn.jpeg') }}" alt="popcorn" class="popcorn">
+                </center>
+            </div>
+            <div class="nav2">
+                {% if not app.user %}
+                <right>
+                    <li class="nav-item">
+                        <a href="{{ path('security_login') }}" class="nav-link"> Connexion</a>
+                    </li>
+                    {% else %}
+                    <li class="nav-item">
+                        <a href="{{ path('security_logout') }}" class="nav-link"> Déconnexion</a>
+                    </li>
+                    {% endif %}
+                </right>
+            </div>
+    
+            <div class="nav1">
+                <center>
+                    <a href="{{ path('home') }}"><img src="{{('http://127.0.0.1:5500/templates/image/home.png') }}" alt="home" class="home"></a>
+                    <a href="{{ path('message') }}"><img src="{{('http://127.0.0.1:5500/templates/image/message1.png') }}" alt="message" class="message"></a>
+                    <a href="{{ path('parametre') }}"><img src="{{('http://127.0.0.1:5500/templates/image/para.png') }}" alt="parametre" class="parametre"></a>
+                    <a href="{{ path('shopping') }}"><img src="{{('http://127.0.0.1:5500/templates/image/shop1.png') }}" alt="panier" class="panier"></a>
+                    <a href="{{ path('filtre') }}"><img src="{{('http://127.0.0.1:5500/templates/image/filtre.png') }}" alt="filtre" class="filtre"></a>
+                    <a href="{{ path('question') }}"><img src="{{('http://127.0.0.1:5500/templates/image/quest.png') }}" alt="question" class="question"></a>
+                    <a href="{{ path('membre') }}"><img src="{{('http://127.0.0.1:5500/templates/image/para.png') }}" alt="membre" class="membre"></a>
+                </center>
+                <a href="{{ path('security_registration') }}"><img src="{{('http://127.0.0.1:5500/templates/image/para.png') }}" alt="inscription" class="inscription"></a>
+            </div>
+    
+        </div>
+        <div class="container">
+            {% block body %}{% endblock %}
+        </div>  
+    </body>
+</html>
